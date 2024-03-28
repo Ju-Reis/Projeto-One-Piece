@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font01:'Secular One', sans-serif;
+    --font02: 'Rubik', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: black;
+    overflow: hidden;
+}
+
+main::after{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+    background: linear-gradient(-233deg, #000 40%, rgba(0,0,0,0)65%) no-repeat;
+}
+
+.personagem{
+    display: none;
+    height: 100vh;
+}
+
+.selecionado{
+    display: block ;
+}
+
+.personagem .imagem{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo{
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+}
+
+.conteudo .nome_personagem{
+    color: white;
+    font-size: 48px;
+    font-family: var(--font01);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.conteudo .descricao{
+    color: white;
+    font-family: var(--font02);
+    line-height: 24px;
+}
+
+.conteudo .logo{
+    background-image: url("../imagens/one-piece-logo.png");
+    background-size: cover;
+    width: 230px;
+    height: 100px;
+    margin-bottom: 35px;
+}
+
+.botoes{
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.botoes .botao{
+    border: #000000;
+    background:none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.botoes .botao img{
+    border-radius: 50%;
+}
+
+.botoes .botao.selecionado{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(197, 197, 197, 0.637);
+}
